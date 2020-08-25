@@ -23,7 +23,7 @@ export default function App() {
   async function handleLikeRepository(id) {
     const response = await api.post(`repositories/${id}/like`);
     
-    if(response.status == 201){
+    if(response.status == 200){
       const repositoryUpdated = response.data; //Repository updated with new like
       const indexRepositoryOutdated = repositories.findIndex(repository => (repository.id == id)); //Get index of repository that was updated
       const repositoriesUpdated = [...repositories];

@@ -51,7 +51,7 @@ describe("Likes", () => {
 
     apiMock
       .onPost(`repositories/${repositoryId}/like`)
-      .reply(201, {
+      .reply(200, {
         id: repositoryId,
         title: "Desafio React Native",
         url: "https://github.com/josepholiveira",
@@ -69,7 +69,7 @@ describe("Likes", () => {
 
     apiMock
       .onPost(`repositories/${repositoryId}/like`)
-      .reply(201, {
+      .reply(200, {
         id: repositoryId,
         title: "Desafio React Native",
         url: "https://github.com/josepholiveira",
